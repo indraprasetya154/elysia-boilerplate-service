@@ -7,7 +7,7 @@ const dbConnection = async () => {
         const sql = neon(config.db.url!)
         const db = drizzle(sql)
 
-        console.log('💚 Drizzle orm connected to neon serverless')
+        console.log('💚 Drizzle ORM connected to Neon Serverless')
         return db
     } catch (error) {
         console.log('error connection db')
