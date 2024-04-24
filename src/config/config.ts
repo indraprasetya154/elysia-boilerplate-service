@@ -1,5 +1,5 @@
-import { Config } from "./config.interface";
-import env from "./config.schema"
+import { Config } from './config.interface'
+import env from './config.schema'
 
 const config: Config = {
     app: {
@@ -13,8 +13,8 @@ const config: Config = {
         username: env.PG_USERNAME,
         password: env.PG_PASSWORD,
         database: env.PG_DATABASE,
-        url: env.PG_DATABASE_URL
-    }
+        url: env.PG_DATABASE_URL,
+    },
 }
 
 export default config

@@ -5,6 +5,8 @@
     "dev": "bun --watch src/index.ts",
     "build": "bun build src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts",
+    "lint": "bun prettier --check ./src",
+    "lint:fix": "bun prettier --write ./src",
     "test": "bun test"
   },
   "dependencies": {
