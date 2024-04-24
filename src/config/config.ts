@@ -1,7 +1,5 @@
 import { Config } from "./config.interface";
-import configSchema from "./config.schema"
-
-const env = configSchema
+import env from "./config.schema"
 
 const config: Config = {
     app: {
