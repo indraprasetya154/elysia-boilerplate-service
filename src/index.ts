@@ -1,8 +1,18 @@
-import { Elysia } from 'elysia'
 import config from './config/config'
+import http from './transports/http'
+import talents from './modules/talents'
 
-const app = new Elysia().get('/', () => 'Hello Elysia').listen(config.app.port)
+const main = async () => {
+    const app = http
+        .get('/', () => 'Hello Elysia')
+        .use(talents)
+        .listen(config.app.port)
 
-console.log(
-    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-)
+    console.log(
+        `🦊 ${config.app.name} is running at ${app.server?.hostname}:${app.server?.port}`
+    )
+
+    return app
+}
+
+export default main()
