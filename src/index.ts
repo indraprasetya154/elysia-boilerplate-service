@@ -4,7 +4,7 @@ import talents from './modules/talents'
 import dbConnection from './database/drizzle'
 
 const main = async () => {
-    dbConnection()
+    await dbConnection()
     const app = http
         .get('/', () => 'Hello Elysia')
         .use(talents)
